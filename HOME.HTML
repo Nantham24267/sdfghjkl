@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOLAR ENERGY</title>
+<link rel="icon" href="SOLAR1.jpg">
+<style>
+body {
+  background-image: url("bg.jpg");
+  margin: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;                   
+  background-size: cover;
+  background-position: center;
+  background-position-x: left;
+  height: 700px;
+}
+
+.topnav {
+  overflow: hidden; 
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}   
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.split {
+  float: right;
+  background-color: #0650a9;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+.show {
+  display: block;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: rgb(149, 149, 149);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e9e7ff;
+}
+
+.btn.active {
+  background-color: #000000;
+  color: white;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: rgb(12, 22, 101);
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e33b9a1;
+}
+
+button.active {
+  background-color: #fffafa;
+  color: rgb(255, 255, 255);
+}
+</style>
+</head>
+<body>  
+<div class="topnav">
+  <a class="split" href="HOME.html">Home🏠</a>
+</div>
+
+<div class="main">
+
+  <h1><b><i>SOLAR PANEL INSTALLATION FOR 
+    DOMESTIC PURPOSE</i></b></h1>
+  <hr>  
+  <div class="row">
+    <div class="column HTML">
+      <div class="content">
+        <img src="SOLAR1.jpg" alt="SOLAR" style="width:100%" height="216">
+        <h4>WHAT IS SOLAR ENERGY?</h4>
+        <a href="solar.html"><button class="button">Click Me!</button></a>
+      </div>
+    </div>
+    <div class="column HTML">
+      <div class="content">
+      <img src="ADV.jpg" alt="HTML " style="width:100%" height="200">
+        <h4>ADVANTAGES OF SOLAR ENERGY</h4>
+        <a href="adv.html"><button class="button">Click Me!</button></a>
+        <p></p>
+      </div>
+    </div>
+    <div class="column HTML">
+      <div class="content">
+      <img src="disadvbg.jpg" alt="Nature" style="width:100%" height="200">
+        <h4>DISADVANTAGES OF SOLAR ENERGY</h4>
+        <a href="disadv.html"><button class="button">Click Me!</button></p>
+        <p></p>
+      </div>
+    </div>
+    <hr>
+    <div class="column HTML">
+      <div class="content">
+        <img src="EFFECTS.jpg" alt="HTML" style="width:100%" height="218">
+        <h4>ENVIRONMENTAL EFFECTS BY SOLAR ENERGY</h4>
+        <a href="ee.html"><button class="button">Click Me!</button></a>
+        <p></p>
+      </div>
+    </div>
+    <hr>
+  <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>  
+</body>
+</html>
